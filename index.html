@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="mt-4">Bem-vindo ao Mundo das Receitas Veganas!</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+ 
+  <style>
+    .navbar {
+      background-color: #7CB342;
+    }
+    .rodape{
+      background-color: #7CB342;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Receitas Veganas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/certificado.html">Certificado Vegano</a>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header>
+      <h1 class="mt-4">Bem-vindo ao Mundo das Receitas Veganas!</h1>
+      <p>Descubra deliciosas receitas veganas que irão surpreender seu paladar.</p>
+      <br>
+      <p>O veganismo é mais do que uma simples escolha alimentar; é um estilo de vida baseado em princípios éticos que buscam evitar o uso e a exploração de animais em todas as áreas da vida, incluindo alimentação, vestuário, produtos de beleza e entretenimento. Os veganos optam por não consumir produtos de origem animal, como carne, laticínios, ovos e mel, e em vez disso, optam por alimentos de origem vegetal, como frutas, legumes, grãos, nozes e sementes.
+        Além da dieta vegana, muitos praticantes desse estilo de vida também evitam o uso de roupas, calçados e acessórios feitos com materiais de origem animal, como couro, lã e seda. 
+      <p>Eles buscam alternativas cruelty-free e eco-friendly, que não causam danos aos animais nem ao meio ambiente. 
+        Os fundamentos do veganismo são enraizados no respeito pela vida e no reconhecimento da senciência dos animais não humanos. Os veganos acreditam que todos os seres sencientes têm o direito fundamental de viverem livres de exploração, crueldade e sofrimento. Eles buscam promover a compaixão, a justiça e a sustentabilidade em suas escolhas diárias, contribuindo para um mundo mais ético e compassivo.
+        Além dos benefícios éticos, muitos estudos têm mostrado os benefícios para a saúde associados a uma dieta vegana bem equilibrada, que pode ajudar a reduzir o risco de doenças crônicas, como doenças cardíacas, diabetes tipo 2 e certos tipos de câncer.</p>
+      <p>Além disso, o veganismo também tem um impacto positivo no meio ambiente, ajudando a reduzir a pegada de carbono, o desmatamento e a poluição da água causados pela indústria pecuária.
+        Embora o veganismo possa parecer desafiador no início, com o tempo, muitos adeptos descobrem uma variedade de alimentos deliciosos e nutritivos que podem desfrutar, além de desenvolverem uma maior consciência sobre as escolhas que fazem e o impacto que têm no mundo ao seu redor.</p>
+    </header>
+    <section  class="text-center" id="recipes">
+      <h2 style="margin-top: 5%; margin-bottom: 5%;" class="text-muted">Receitas em Destaque</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/lasanhavegana.jpg" alt="Receita 1" width="">
+            <h3>Lasanha Vegana</h3>
+            <p class="col-mb-9">Uma versão saudável e deliciosa da clássica lasanha italiana.</p>
+            <a href="pages/receita1.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/bolochocolate.jpg" alt="Receita 2" width="">
+            <h3>Bolo de Chocolate Vegano</h3>
+            <p>Um bolo rico em chocolate, sem ingredientes de origem animal.</p>
+            <a href="pages/receita2.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/tacovegano.jpg" alt="Receita 3" >
+            <h3>Tacos Veganos</h3>
+            <p>Tacos mexicanos cheios de sabor, sem carne ou laticínios.</p>
+            <a href="pages/receita3.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/curry.jpg" alt="Receita 4" >
+            <h3>Curry de Grão-de-Bico e Vegetais</h3>
+            <p>Uma opção deliciosa e saborosa para uma refeição saudável e satisfatória.</p>
+            <a href="pages/receita4.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/nachos.jpg" alt="Receita 5">
+            <h3>Tacos de Couve-flor Grelhada</h3>
+            <p>A couve-flor é marinada em temperos saborosos e depois grelhada para um sabor defumado.</p>
+            <a href="pages/receita5.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="recipe-card">
+            <img class="col-md-10" src="img/sorvetebanana.jpg" alt="Receita 6">
+            <h3>Sorvete de Banana Congelada</h3>
+            <p>Basta congelar bananas, depois colocs-las em um processador de alimentos para ter uma consistência cremosa.</p>
+            <a href="pages/receita6.html" class="btn btn-primary mb-4">Ver Receita</a>
+          </div>
+        </div>
+      </div>
+        <div style="text-align: center; margin-top: 5%; margin-bottom: 5%;">
+            <a href="index.html" class="btn btn-primary" style="font-size: 18px;">Voltar para a Página Inicial</a>
+        </div>
+    </section>  
+  </div>
+  <footer  style="font-size: 16px;" class=" rodape text-center footer-expand-lg mt-4 " >
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-2 mt-4">
+            <h4>Horário de Atendimento</h4>
+            <p style="margin-left: auto;" class="col-md">Horário comercial: Segunda a sexta-feira, das 09h às 17h (fechados nos feriados e recesso de final de ano).</p>
+        </div>
+        <div class="col-md-2 mt-4">
+            <h4>Nosso Endereço</h4>
+            <p class="col-md">A Associação Brasileira de Veganismo está situada na cidade de São Paulo. Atendimento online para empresas de todo o Brasil.</p>
+        </div>
+        <div class="col-md-2 mt-4">
+            <h4>Informação</h4>
+            <ul class="col-md">
+                <li><a href="#">A Associação</a></li>
+                <li><a href="#">Perguntas e Respostas</a></li>
+                <li><a href="#">Certificado Vegano</a></li>
+                <li><a href="#">Produtos Veganos</a></li>
+                <li><a href="#">Entre em Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</footer >
+
+
+  
+
+  <!-- Bootstrap e JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

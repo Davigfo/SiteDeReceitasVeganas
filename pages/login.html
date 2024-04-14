@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .error-message {
+      color: red;
+    }
+    .navbar {
+      background-color: #7CB342;
+ 
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Receitas Veganas</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sigin.html">SigIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h1 class="mt-5">Login</h1>
+    <form id="loginForm" class="mt-4">
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+        <div class="error-message" id="nameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="error-message" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Número de Telefone:</label>
+        <input type="text" class="form-control" id="phone" name="phone" required>
+        <div class="error-message" id="phoneError"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+        <div class="error-message" id="passwordError"></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap e JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var nameError = document.getElementById("nameError");
+      var emailError = document.getElementById("emailError");
+      var phoneError = document.getElementById("phoneError");
+
+      // Reset previous error messages
+      nameError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+
+      // Validate name
+      if (name.trim() === "") {
+        nameError.textContent = "Por favor, insira seu nome.";
+        return false;
+      }
+
+      // Validate email
+      if (email.trim() === "") {
+        emailError.textContent = "Por favor, insira seu email.";
+        return false;
+      } else if (!isValidEmail(email)) {
+        emailError.textContent = "Por favor, insira um email válido.";
+        return false;
+      }
+
+      // Validate phone number
+      if (phone.trim() === "") {
+        phoneError.textContent = "Por favor, insira seu número de telefone.";
+        return false;
+      } else if (!isValidPhone(phone)) {
+        phoneError.textContent = "Por favor, insira um número de telefone válido.";
+        return false;
+      }
+
+      // If all validations pass, submit the form
+      alert("Login successful!");
+      // Uncomment the line below to submit the form to a server
+      // document.getElementById("loginForm").submit();
+    });
+
+    function isValidEmail(email) {
+      // Simple email validation, you may use a more robust method
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+    function isValidPhone(phone) {
+      // Simple phone number validation, you may use a more robust method
+      var re = /^\d{10}$/;
+      return re.test(phone);
+    }
+  </script>
+</body>
+</html>
